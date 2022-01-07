@@ -1,0 +1,51 @@
+.search-dropdown-col{
+    position: relative;
+}
+.search-dropdown{
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    top: 5rem;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding:18px 32px;
+}
+.dropdown-data-container{
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: 1px solid black;
+    height: fit-content;
+    padding-bottom: 2px;
+    margin-bottom: 17px;
+}
+.dropdown-user-data{
+    display: flex;
+    flex-direction: column;
+    color: #484848;
+}
+.dropdown-user-email{
+    display: flex;
+    justify-content:center;
+    font-weight: 500;
+    color: #484848;
+}
+.dropdown-user-data, .dropdown-user-email{
+    font-size: 18px;
+}
+.dropdown-user-data span{
+    font-size: 12px;
+    font-weight: bold;
+}
+.dropdown-more{
+    position: absolute;
+    text-align: center;
+    bottom: 9px;
+    font-size:14px;
+    font-weight: bold;
+}
+.dropdown-more span{
+    margin-right: 6%;
+}
+.dropdown-more span:hover{
+    cursor: pointer;
+}

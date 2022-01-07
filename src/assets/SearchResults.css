@@ -1,0 +1,10 @@
+.search-header{
+    padding: 27px 37px;
+}
+.search-header img{
+    width: 200px;
+}
+.search-header-container{
+    display: flex;
+    flex-wrap: nowrap;
+}
