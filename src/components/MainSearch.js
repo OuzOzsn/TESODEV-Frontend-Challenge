@@ -1,16 +1,30 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../assets/pics/tesodev_logo.png";
 import { Col, FormControl, Button } from "react-bootstrap";
-import SearchDrop from "./SearchDrop";
+import SearchDrop from "./mainPieces/SearchDrop";
 
-const MainSearch = () => {
-  const [inputData, setInputData] = useState("");
+const MainSearch = ({allData, isLoading, filterText, setFilterText, search, setSearch}) => {
+  const [filtred, setFiltred] = useState([]);
+  var filtredData = "";
 
   const handleChange = (e) => {
-    setInputData(e.target.value);
+    setFilterText(e.target.value);
   };
+
+  useEffect(()=>{
+    if(search){
+        if(!!allData && filterText.trim().length > 0){
+          // eslint-disable-next-line react-hooks/exhaustive-deps
+            filtredData = allData.filter((data)=> data[4].toLowerCase().includes(filterText.toLowerCase().trim()));
+            setFiltred(filtredData);
+            setSearch(false);
+        }
+    }
+  },[search])
+
+
   return (
-    <div class="landing-container">
+    <div className="landing-container">
       <Col className="landing-logo-container">
         <Col className="landing-logo mb-5">
           <img src={logo} alt="logo" />
@@ -20,12 +34,12 @@ const MainSearch = () => {
           <Col className="search-dropdown-col">
             <FormControl
               className="search-input"
-              value={inputData}
+              value={filterText}
               onChange={handleChange}
             />
-            {inputData.trim().length <= 0 ? "" : <SearchDrop />}
+            {filtred.length === 0 ? "" : <SearchDrop filtred={filtred} />}
           </Col>
-          <Button>Search</Button>
+          <Button onClick={()=>setSearch(true)}>Search</Button>
         </Col>
       </Col>
     </div>
