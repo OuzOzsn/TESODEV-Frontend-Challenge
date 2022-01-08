@@ -1,24 +1,18 @@
 import React from "react";
-import { Col, FormControl } from "react-bootstrap";
-import logo from "../assets/pics/tesodev_logo.png";
+import ResultsHeader from "./resultPieces/ResultsHeader";
+import ResultsSearchTable from "./resultPieces/ResultsSearchTable";
 
-const SearchResutls = () => {
+
+const SearchResutls = ({allData, isLoading,filterText, setFilterText, search, setSearch}) => {
+
+  
+
+  
+
   return (
     <>
-      <Col
-        className="search-header"
-        xs={12}
-        sm={12}
-        md={12}
-        lg={12}
-        xl={12}
-        xxl={12}
-      >
-        <Col className="search-header-container">
-          <img src={logo} alt="slm"></img>
-          <FormControl />
-        </Col>
-      </Col>
+      <ResultsHeader filterText={filterText} setFilterText={setFilterText} setSearch={setSearch} />
+      <ResultsSearchTable filterText={filterText} search={search} setSearch={setSearch} allData={allData} isLoading={isLoading} />
     </>
   );
 };
