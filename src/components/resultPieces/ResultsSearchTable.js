@@ -52,10 +52,10 @@ const ResultsSearchTable = ({
     <>
       <Col
         className="search-table mt-5"
-        xs={7}
-        sm={7}
-        md={7}
-        lg={7}
+        xs={12}
+        sm={12}
+        md={10}
+        lg={10}
         xl={7}
         xxl={7}
       >
@@ -77,11 +77,11 @@ const ResultsSearchTable = ({
         </Col>
         <Col
           className="search-datas mt-3"
-          xs={9}
-          sm={9}
-          md={9}
-          lg={9}
-          xl={9}
+          xs={11}
+          sm={11}
+          md={11}
+          lg={11}
+          xl={11}
           xxl={9}
         >
           {currentPosts.map((data, index) => {
@@ -151,6 +151,7 @@ const ResultsSearchTable = ({
             totalPosts={filtered.length}
             paginate={paginate}
             currentPage={currentPage}
+            setCurrentPage={setCurrentPage}
           />
         </Col>
       </Col>

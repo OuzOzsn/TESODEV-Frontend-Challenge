@@ -49,7 +49,7 @@
     display: flex;
     justify-content: flex-end;
     margin-left: 16px;
-    height:"100px";
+    height:fit-content;
 }
 .search-order span{
     font-size: 18px;
@@ -93,6 +93,10 @@
 }
 .pagination{
     justify-content: center;
+    height: fit-content;
+}
+.previous-btn, .next-btn{
+    padding: 6px 2.4rem !important;
 }
 .page-link{
     padding: 0;
@@ -104,6 +108,7 @@
 a.page-link{
     border: 1px solid #484848;
     border-radius: 4px;
+    height: fit-content;
 }
 a.page-link:hover, a.page-link:focus, a.page-active {
     background-color: #204080;
