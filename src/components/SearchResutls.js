@@ -5,10 +5,6 @@ import ResultsSearchTable from "./resultPieces/ResultsSearchTable";
 
 const SearchResutls = ({allData, isLoading,filterText, setFilterText, search, setSearch}) => {
 
-  
-
-  
-
   return (
     <>
       <ResultsHeader filterText={filterText} setFilterText={setFilterText} setSearch={setSearch} />
