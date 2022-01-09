@@ -89,3 +89,27 @@
     font-size: 12px;
     font-weight: 700;
 }
+.search-table-pagination{
+}
+.pagination{
+    justify-content: center;
+}
+.page-link{
+    padding: 0;
+    font-size: 14px;
+    font-weight: bold;
+    color: #484848 !important;
+    margin-right: 11px;
+}
+a.page-link{
+    border: 1px solid #484848;
+    border-radius: 4px;
+}
+a.page-link:hover, a.page-link:focus, a.page-active {
+    background-color: #204080;
+    color: white !important;
+}
+a.page-link:focus {
+    z-index: 3;
+    box-shadow: none;
+}
